@@ -2,7 +2,7 @@
   "counts": {
     "deployments": 0,
     "entrypoints": 0,
-    "files": 9,
+    "files": 10,
     "flows": 0,
     "frameworks": 0,
     "interfaces": 0,
@@ -26,7 +26,13 @@
     },
     {
       "path": "README.md",
-      "size": 1822,
+      "size": 1887,
+      "suffix": ".md",
+      "tags": []
+    },
+    {
+      "path": "ROADMAP.md",
+      "size": 3263,
       "suffix": ".md",
       "tags": []
     },
@@ -78,6 +84,7 @@
     ".gitignore": null,
     "LICENSE": null,
     "README.md": null,
+    "ROADMAP.md": null,
     "SKILL.md": null,
     "code-docs.yml": null,
     "examples": {

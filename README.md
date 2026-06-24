@@ -18,6 +18,7 @@ Multi-agent work fails when agents all act with equal authority, share too much 
 ## Contents
 
 - `SKILL.md` - the reusable skill instructions
+- `ROADMAP.md` - tasklist for the broader agent operating system
 - `templates/agent-brief.md` - subagent launch template
 - `templates/hub-state.json` - resumable orchestration state template
 - `templates/final-report.md` - final synthesis template

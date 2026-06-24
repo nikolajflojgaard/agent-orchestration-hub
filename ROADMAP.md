@@ -4,10 +4,11 @@ This is the working tasklist for building a stronger personal agent operating sy
 
 ## Priority Queue
 
-- [ ] **Repo Fleet Maintainer**
+- [x] **Repo Fleet Maintainer**
   - Maintain all active repos with dependency audits, CI/deploy checks, stale branch checks, missing docs, security headers, and safe small updates.
   - Output weekly report plus safe commits/PRs where appropriate.
   - Keep breaking upgrades, missing secrets, and dirty worktrees as explicit human-review items.
+  - Repo shipped: https://github.com/nikolajflojgaard/repo-fleet-maintainer
 
 - [ ] **Agent Workbench**
   - Turn messy user requests into lanes, briefs, state, artifacts, validation gates, and final reports.

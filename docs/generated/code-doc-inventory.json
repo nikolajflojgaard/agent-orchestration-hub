@@ -1,0 +1,93 @@
+{
+  "counts": {
+    "deployments": 0,
+    "entrypoints": 0,
+    "files": 9,
+    "flows": 0,
+    "frameworks": 0,
+    "interfaces": 0,
+    "manifests": 0,
+    "routes": 0
+  },
+  "deployments": [],
+  "entrypoints": [],
+  "files": [
+    {
+      "path": ".gitignore",
+      "size": 49,
+      "suffix": "",
+      "tags": []
+    },
+    {
+      "path": "LICENSE",
+      "size": 1075,
+      "suffix": "",
+      "tags": []
+    },
+    {
+      "path": "README.md",
+      "size": 1822,
+      "suffix": ".md",
+      "tags": []
+    },
+    {
+      "path": "SKILL.md",
+      "size": 9069,
+      "suffix": ".md",
+      "tags": []
+    },
+    {
+      "path": "code-docs.yml",
+      "size": 243,
+      "suffix": ".yml",
+      "tags": []
+    },
+    {
+      "path": "examples/hub-state-example.json",
+      "size": 1286,
+      "suffix": ".json",
+      "tags": []
+    },
+    {
+      "path": "templates/agent-brief.md",
+      "size": 805,
+      "suffix": ".md",
+      "tags": []
+    },
+    {
+      "path": "templates/final-report.md",
+      "size": 332,
+      "suffix": ".md",
+      "tags": []
+    },
+    {
+      "path": "templates/hub-state.json",
+      "size": 522,
+      "suffix": ".json",
+      "tags": []
+    }
+  ],
+  "flows": [],
+  "frameworks": [],
+  "interfaces": [],
+  "manifests": [],
+  "repo": "agent-orchestration-hub",
+  "root": ".",
+  "routes": [],
+  "tree": {
+    ".gitignore": null,
+    "LICENSE": null,
+    "README.md": null,
+    "SKILL.md": null,
+    "code-docs.yml": null,
+    "examples": {
+      "hub-state-example.json": null
+    },
+    "templates": {
+      "agent-brief.md": null,
+      "final-report.md": null,
+      "hub-state.json": null
+    }
+  },
+  "truncated": false
+}

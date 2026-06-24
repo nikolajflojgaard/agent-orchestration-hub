@@ -1,0 +1,42 @@
+{
+  "objective": "Audit three repositories for non-breaking security updates and push safe lockfile fixes.",
+  "started_at": "2026-06-24T15:00:00Z",
+  "constraints": [
+    "Do not revert unrelated dirty worktree changes.",
+    "Only commit package-lock.json changes.",
+    "Do not force breaking framework upgrades."
+  ],
+  "lanes": [
+    {
+      "id": "repo-audit-1",
+      "agent": "agent-a",
+      "role": "Tester",
+      "scope": ["repo-a"],
+      "writes": ["repo-a/package-lock.json"],
+      "status": "done",
+      "gate": "build passes and audit improves",
+      "last_update": "Lockfile updated; build passed.",
+      "artifacts": ["commit abc123"]
+    },
+    {
+      "id": "repo-audit-2",
+      "agent": "agent-b",
+      "role": "Reviewer",
+      "scope": ["repo-b"],
+      "writes": [],
+      "status": "blocked",
+      "gate": "dirty worktree understood",
+      "last_update": "Unrelated user changes block safe commit.",
+      "artifacts": []
+    }
+  ],
+  "merge_gates": {
+    "scope_checked": true,
+    "user_changes_preserved": true,
+    "validation_run": true,
+    "security_privacy_checked": true,
+    "external_actions_approved": true
+  },
+  "final_artifacts": ["security-summary.md"],
+  "residual_risks": ["Astro 7 upgrade requires separate breaking-change pass."]
+}

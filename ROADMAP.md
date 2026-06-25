@@ -43,9 +43,11 @@ This is the working tasklist for building a stronger personal agent operating sy
   - Wave 1 shipped to the skill/agent repos with green Code docs Actions.
   - Wave 2 shipped to clean public app/integration repos with green Code docs Actions.
 
-- [ ] **Personal Ops Dashboard**
+- [x] **Personal Ops Dashboard**
   - Local dashboard for active agent tasks, waiting items, repo health, failed deploys, recent commits, memory items, and pending approvals.
   - Keep it functional before making it pretty.
+  - Repo shipped: https://github.com/nikolajflojgaard/personal-ops-dashboard
+  - Local refresh LaunchAgent installed: `ai.openclaw.personal-ops-dashboard`
 
 - [ ] **Skill Publisher Pipeline**
   - Turn a Skill Workshop proposal into repo, docs, release artifact, and OpenClaw community publishing flow.
@@ -53,9 +55,33 @@ This is the working tasklist for building a stronger personal agent operating sy
 
 ## Current Build Target
 
-**Personal Ops Dashboard** is the next build.
+**Skill Publisher Pipeline** is the next build.
 
-Reason: the core workflow skills, QA, memory, TaskFlow runner, evaluation harness, and code-doc CI rollout are now in place. The next useful layer is a local operational view of active tasks, waits, repo health, failed deploys, recent commits, memory items, and pending approvals.
+Reason: the core workflow skills, QA, memory, TaskFlow runner, evaluation harness, code-doc CI rollout, startup layer, and local ops visibility are now in place. The remaining roadmap item is turning skills/proposals into reusable publishing packages and a ClawHub/community release path once auth is ready.
+
+## Acceptance Criteria For Personal Ops Dashboard
+
+- [x] Show OpenClaw gateway and node service status.
+- [x] Show active tasks, task audit health, cron snapshot, and recent sessions.
+- [x] Show local repo dirty/clean state and latest commits.
+- [x] Show recent GitHub workflow runs for tracked repos.
+- [x] Show pending approvals snapshot.
+- [x] Show memory note freshness.
+- [x] Generate a local dashboard without requiring a dev server.
+- [x] Install a macOS LaunchAgent refresh loop.
+- [x] Keep generated dashboard data out of git.
+- [x] Generate docs, diagrams, and Code docs CI for the dashboard repo.
+
+## Personal Ops Dashboard Summary
+
+The dashboard is a local static HTML surface generated from OpenClaw, git, GitHub, and memory files. It is deliberately local-first because it can show private operational context.
+
+Runtime:
+
+- LaunchAgent: `ai.openclaw.personal-ops-dashboard`
+- Refresh cadence: every five minutes and at login.
+- Runtime path: `~/.openclaw/personal-ops-dashboard/dashboard/index.html`
+- Source repo: https://github.com/nikolajflojgaard/personal-ops-dashboard
 
 ## Acceptance Criteria For Code Doc Pipeline GitHub Rollout
 

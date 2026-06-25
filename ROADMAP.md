@@ -20,10 +20,11 @@ This is the working tasklist for building a stronger personal agent operating sy
   - Use as the default second pass for serious work.
   - Repo shipped: https://github.com/nikolajflojgaard/agent-qa-red-team
 
-- [ ] **Agent Memory Distiller**
+- [x] **Agent Memory Distiller**
   - Review daily notes, commits, chats, and outcomes.
   - Promote only durable lessons into long-term memory.
   - Avoid context rot and memory bloat.
+  - Repo shipped: https://github.com/nikolajflojgaard/agent-memory-distiller
 
 - [ ] **TaskFlow Agent Runner**
   - Durable background workflow for tasks that wait, resume, monitor, or run over time.
@@ -43,20 +44,20 @@ This is the working tasklist for building a stronger personal agent operating sy
 
 ## Current Build Target
 
-**Agent Memory Distiller** is the next build.
+**TaskFlow Agent Runner** is the next build.
 
-Reason: the work is now moving fast enough that context hygiene matters. Daily notes are useful, but without a deliberate distillation workflow they will become noisy and long-term memory will either rot or bloat.
+Reason: the agent operating system now has orchestration, workbench packetization, QA, repo maintenance, and memory hygiene. The next missing piece is durable background execution for work that waits, resumes, monitors, or spans multiple turns.
 
-## Acceptance Criteria For Agent Memory Distiller
+## Acceptance Criteria For TaskFlow Agent Runner
 
-- [ ] Reviews recent daily notes, commits, chats, and outcomes.
-- [ ] Separates raw chronology from durable lessons.
-- [ ] Promotes only stable preferences, decisions, projects, relationships, and recurring lessons.
-- [ ] Avoids secrets and sensitive operational details unless explicitly requested.
-- [ ] Produces a compact memory update plan before touching long-term memory.
-- [ ] Supports no-change reports when nothing deserves promotion.
-- [ ] Includes cleanup rules for stale or contradicted long-term memory.
-- [ ] Fits heartbeat and end-of-session maintenance workflows.
+- [ ] Defines durable task state for waiting, resuming, and monitoring.
+- [ ] Separates owner context, child task context, and heartbeat/cron state.
+- [ ] Supports CI/deploy waits, imports, releases, research, media generation, and scheduled jobs.
+- [ ] Provides stop/resume/escalation rules.
+- [ ] Avoids stale heartbeat instructions and duplicated background jobs.
+- [ ] Produces concise progress and final reports.
+- [ ] Handles approval waits without losing state.
+- [ ] Fits OpenClaw TaskFlow and session handoff workflows.
 
 ## Operating Principles
 

@@ -15,9 +15,10 @@ This is the working tasklist for building a stronger personal agent operating sy
   - Make this the day-to-day operating workflow for multi-agent tasks.
   - Repo shipped: https://github.com/nikolajflojgaard/agent-workbench
 
-- [ ] **Agent QA / Red Team**
+- [x] **Agent QA / Red Team**
   - Read-only review pattern for bugs, hallucinations, security issues, missing validation, and weak reasoning.
   - Use as the default second pass for serious work.
+  - Repo shipped: https://github.com/nikolajflojgaard/agent-qa-red-team
 
 - [ ] **Agent Memory Distiller**
   - Review daily notes, commits, chats, and outcomes.
@@ -42,20 +43,20 @@ This is the working tasklist for building a stronger personal agent operating sy
 
 ## Current Build Target
 
-**Agent QA / Red Team** is the next build.
+**Agent Memory Distiller** is the next build.
 
-Reason: the hub, fleet maintainer, and workbench now make it easier to split and run work. The next weak point is independent quality control: serious tasks should get a reusable read-only second pass for bugs, security, validation gaps, and weak reasoning.
+Reason: the work is now moving fast enough that context hygiene matters. Daily notes are useful, but without a deliberate distillation workflow they will become noisy and long-term memory will either rot or bloat.
 
-## Acceptance Criteria For Agent QA / Red Team
+## Acceptance Criteria For Agent Memory Distiller
 
-- [ ] Defines read-only reviewer roles for code, docs, security, validation, and reasoning.
-- [ ] Provides checklists that prioritize findings over summaries.
-- [ ] Requires file/line evidence or reproducible commands for claims.
-- [ ] Separates blockers, high-confidence findings, questions, and low-confidence risks.
-- [ ] Detects missing validation and overclaimed completion.
-- [ ] Includes privacy and secret-handling rules.
-- [ ] Produces concise review reports that the hub can act on.
-- [ ] Fits builder-reviewer and release-gate workflows.
+- [ ] Reviews recent daily notes, commits, chats, and outcomes.
+- [ ] Separates raw chronology from durable lessons.
+- [ ] Promotes only stable preferences, decisions, projects, relationships, and recurring lessons.
+- [ ] Avoids secrets and sensitive operational details unless explicitly requested.
+- [ ] Produces a compact memory update plan before touching long-term memory.
+- [ ] Supports no-change reports when nothing deserves promotion.
+- [ ] Includes cleanup rules for stale or contradicted long-term memory.
+- [ ] Fits heartbeat and end-of-session maintenance workflows.
 
 ## Operating Principles
 

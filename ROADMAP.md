@@ -31,9 +31,15 @@ This is the working tasklist for building a stronger personal agent operating sy
   - Useful for CI, releases, imports, research, media generation, and scheduled jobs.
   - Repo shipped: https://github.com/nikolajflojgaard/taskflow-agent-runner
 
-- [ ] **Agent Evaluation Harness**
+- [x] **Agent Evaluation Harness**
   - Test tasks and rubrics for agent behavior.
   - Score repo updates, writing, security audits, dirty-worktree handling, secret avoidance, and validation honesty.
+  - Repo shipped: https://github.com/nikolajflojgaard/agent-evaluation-harness
+
+- [ ] **Code Doc Pipeline GitHub Rollout**
+  - Make code-doc-pipeline a deliberate default where appropriate across GitHub repos.
+  - Distinguish generated docs/config coverage from actual CI workflow coverage.
+  - Exclude repos where generated docs are not useful or privacy-safe.
 
 - [ ] **Personal Ops Dashboard**
   - Local dashboard for active agent tasks, waiting items, repo health, failed deploys, recent commits, memory items, and pending approvals.
@@ -45,20 +51,20 @@ This is the working tasklist for building a stronger personal agent operating sy
 
 ## Current Build Target
 
-**Agent Evaluation Harness** is the next build.
+**Code Doc Pipeline GitHub Rollout** is the next build.
 
-Reason: the operating system now has execution workflows, background state, memory hygiene, and QA. The next gap is measuring agent behavior against repeatable tasks instead of relying only on vibes after each run.
+Reason: a GitHub-wide audit showed code-doc-pipeline is not embedded as a default across repos. The skill repos have `code-docs.yml` and generated docs, but they do not yet have GitHub Actions docs checks; most other repos have no code-doc-pipeline config or generated docs.
 
-## Acceptance Criteria For Agent Evaluation Harness
+## Acceptance Criteria For Code Doc Pipeline GitHub Rollout
 
-- [ ] Defines repeatable task fixtures and scoring rubrics.
-- [ ] Scores repo updates, writing, security audits, dirty-worktree handling, secret avoidance, and validation honesty.
-- [ ] Separates objective checks from reviewer judgment.
-- [ ] Produces machine-readable and human-readable results.
-- [ ] Supports regression comparisons across skill versions.
-- [ ] Keeps private fixtures out of public repos unless explicitly scrubbed.
-- [ ] Fits Agent QA / Red Team as an independent review lane.
-- [ ] Produces concise improvement recommendations.
+- [ ] Produce an explicit repo inclusion/exclusion plan.
+- [ ] Add or verify `code-docs.yml` for included repos.
+- [ ] Generate useful docs and Mermaid diagrams for included repos.
+- [ ] Add GitHub Actions docs check where CI is appropriate.
+- [ ] Avoid privacy-sensitive docs in private or backup repos unless explicitly approved.
+- [ ] Preserve dirty worktrees and existing CI/deploy behavior.
+- [ ] Validate `code_docs.py check` and Mermaid diagrams per repo.
+- [ ] Report repos intentionally deferred or excluded.
 
 ## Operating Principles
 

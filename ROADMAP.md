@@ -26,9 +26,10 @@ This is the working tasklist for building a stronger personal agent operating sy
   - Avoid context rot and memory bloat.
   - Repo shipped: https://github.com/nikolajflojgaard/agent-memory-distiller
 
-- [ ] **TaskFlow Agent Runner**
+- [x] **TaskFlow Agent Runner**
   - Durable background workflow for tasks that wait, resume, monitor, or run over time.
   - Useful for CI, releases, imports, research, media generation, and scheduled jobs.
+  - Repo shipped: https://github.com/nikolajflojgaard/taskflow-agent-runner
 
 - [ ] **Agent Evaluation Harness**
   - Test tasks and rubrics for agent behavior.
@@ -44,20 +45,20 @@ This is the working tasklist for building a stronger personal agent operating sy
 
 ## Current Build Target
 
-**TaskFlow Agent Runner** is the next build.
+**Agent Evaluation Harness** is the next build.
 
-Reason: the agent operating system now has orchestration, workbench packetization, QA, repo maintenance, and memory hygiene. The next missing piece is durable background execution for work that waits, resumes, monitors, or spans multiple turns.
+Reason: the operating system now has execution workflows, background state, memory hygiene, and QA. The next gap is measuring agent behavior against repeatable tasks instead of relying only on vibes after each run.
 
-## Acceptance Criteria For TaskFlow Agent Runner
+## Acceptance Criteria For Agent Evaluation Harness
 
-- [ ] Defines durable task state for waiting, resuming, and monitoring.
-- [ ] Separates owner context, child task context, and heartbeat/cron state.
-- [ ] Supports CI/deploy waits, imports, releases, research, media generation, and scheduled jobs.
-- [ ] Provides stop/resume/escalation rules.
-- [ ] Avoids stale heartbeat instructions and duplicated background jobs.
-- [ ] Produces concise progress and final reports.
-- [ ] Handles approval waits without losing state.
-- [ ] Fits OpenClaw TaskFlow and session handoff workflows.
+- [ ] Defines repeatable task fixtures and scoring rubrics.
+- [ ] Scores repo updates, writing, security audits, dirty-worktree handling, secret avoidance, and validation honesty.
+- [ ] Separates objective checks from reviewer judgment.
+- [ ] Produces machine-readable and human-readable results.
+- [ ] Supports regression comparisons across skill versions.
+- [ ] Keeps private fixtures out of public repos unless explicitly scrubbed.
+- [ ] Fits Agent QA / Red Team as an independent review lane.
+- [ ] Produces concise improvement recommendations.
 
 ## Operating Principles
 

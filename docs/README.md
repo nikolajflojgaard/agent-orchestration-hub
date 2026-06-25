@@ -7,7 +7,7 @@
 - Service: `agent-orchestration-hub`
 - Repository: `agent-orchestration-hub`
 - Owner: `Nikolaj Fløjgaard`
-- Files inventoried: `10`
+- Files inventoried: `11`
 - Manifests: `0`
 - Frameworks detected: `0`
 - Routes detected: `0`

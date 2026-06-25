@@ -36,10 +36,12 @@ This is the working tasklist for building a stronger personal agent operating sy
   - Score repo updates, writing, security audits, dirty-worktree handling, secret avoidance, and validation honesty.
   - Repo shipped: https://github.com/nikolajflojgaard/agent-evaluation-harness
 
-- [ ] **Code Doc Pipeline GitHub Rollout**
+- [x] **Code Doc Pipeline GitHub Rollout**
   - Make code-doc-pipeline a deliberate default where appropriate across GitHub repos.
   - Distinguish generated docs/config coverage from actual CI workflow coverage.
   - Exclude repos where generated docs are not useful or privacy-safe.
+  - Wave 1 shipped to the skill/agent repos with green Code docs Actions.
+  - Wave 2 shipped to clean public app/integration repos with green Code docs Actions.
 
 - [ ] **Personal Ops Dashboard**
   - Local dashboard for active agent tasks, waiting items, repo health, failed deploys, recent commits, memory items, and pending approvals.
@@ -51,20 +53,49 @@ This is the working tasklist for building a stronger personal agent operating sy
 
 ## Current Build Target
 
-**Code Doc Pipeline GitHub Rollout** is the next build.
+**Personal Ops Dashboard** is the next build.
 
-Reason: a GitHub-wide audit showed code-doc-pipeline is not embedded as a default across repos. The skill repos have `code-docs.yml` and generated docs, but they do not yet have GitHub Actions docs checks; most other repos have no code-doc-pipeline config or generated docs.
+Reason: the core workflow skills, QA, memory, TaskFlow runner, evaluation harness, and code-doc CI rollout are now in place. The next useful layer is a local operational view of active tasks, waits, repo health, failed deploys, recent commits, memory items, and pending approvals.
 
 ## Acceptance Criteria For Code Doc Pipeline GitHub Rollout
 
-- [ ] Produce an explicit repo inclusion/exclusion plan.
-- [ ] Add or verify `code-docs.yml` for included repos.
-- [ ] Generate useful docs and Mermaid diagrams for included repos.
-- [ ] Add GitHub Actions docs check where CI is appropriate.
-- [ ] Avoid privacy-sensitive docs in private or backup repos unless explicitly approved.
-- [ ] Preserve dirty worktrees and existing CI/deploy behavior.
-- [ ] Validate `code_docs.py check` and Mermaid diagrams per repo.
-- [ ] Report repos intentionally deferred or excluded.
+- [x] Produce an explicit repo inclusion/exclusion plan.
+- [x] Add or verify `code-docs.yml` for included repos.
+- [x] Generate useful docs and Mermaid diagrams for included repos.
+- [x] Add GitHub Actions docs check where CI is appropriate.
+- [x] Avoid privacy-sensitive docs in private or backup repos unless explicitly approved.
+- [x] Preserve dirty worktrees and existing CI/deploy behavior.
+- [x] Validate `code_docs.py check` and Mermaid diagrams per repo.
+- [x] Report repos intentionally deferred or excluded.
+
+## Code Doc Pipeline GitHub Rollout Summary
+
+Included with green Code docs Actions:
+
+- `agent-orchestration-hub`
+- `repo-fleet-maintainer`
+- `agent-workbench`
+- `agent-qa-red-team`
+- `agent-memory-distiller`
+- `taskflow-agent-runner`
+- `agent-evaluation-harness`
+- `home-assistant-home-brief`
+- `homeassistant-household-chores`
+- `homeassistant-investing-score-card`
+- `homeassistant-weekly-training`
+- `mjk-judo`
+- `reichkendlersolutions`
+
+Supporting generator update:
+
+- `code-doc-pipeline` now supports stable `repository_name` metadata so CI checkout folder names do not create false docs drift.
+- `code-doc-pipeline` excludes `.husky` helper files by default.
+
+Deferred or excluded:
+
+- Dirty local repos deferred to avoid trampling active work: `brands`, `egedalbogholderi`, `nikolajflojgaard.me`, `social-media-engagementbooster`, `tesla-fsd-ai-bot`, `venture-ai-copilot`.
+- Private, backup, template, owner-mismatch, or unclear-scope repos are deferred until explicitly approved or classified.
+- `code-doc-pipeline` remains self-managed with its existing validation workflow.
 
 ## Operating Principles
 

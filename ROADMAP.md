@@ -10,9 +10,10 @@ This is the working tasklist for building a stronger personal agent operating sy
   - Keep breaking upgrades, missing secrets, and dirty worktrees as explicit human-review items.
   - Repo shipped: https://github.com/nikolajflojgaard/repo-fleet-maintainer
 
-- [ ] **Agent Workbench**
+- [x] **Agent Workbench**
   - Turn messy user requests into lanes, briefs, state, artifacts, validation gates, and final reports.
   - Make this the day-to-day operating workflow for multi-agent tasks.
+  - Repo shipped: https://github.com/nikolajflojgaard/agent-workbench
 
 - [ ] **Agent QA / Red Team**
   - Read-only review pattern for bugs, hallucinations, security issues, missing validation, and weak reasoning.
@@ -41,23 +42,20 @@ This is the working tasklist for building a stronger personal agent operating sy
 
 ## Current Build Target
 
-**Repo Fleet Maintainer** is the next build.
+**Agent QA / Red Team** is the next build.
 
-Reason: today already proved the value. Several repos had stale dependencies, missing deploy secrets, dirty worktrees, and repeated Astro upgrade risk. This should become a repeatable agent workflow instead of manual sweeping.
+Reason: the hub, fleet maintainer, and workbench now make it easier to split and run work. The next weak point is independent quality control: serious tasks should get a reusable read-only second pass for bugs, security, validation gaps, and weak reasoning.
 
-## Acceptance Criteria For Repo Fleet Maintainer
+## Acceptance Criteria For Agent QA / Red Team
 
-- [ ] Discovers active repos from configured roots.
-- [ ] Classifies repo type: Node, Python, static site, Home Assistant integration, skill repo, unknown.
-- [ ] Runs read-only health checks first.
-- [ ] Detects dirty worktrees and preserves user changes.
-- [ ] Runs dependency audits where safe.
-- [ ] Applies only non-breaking fixes automatically when explicitly authorized.
-- [ ] Separates breaking upgrades into review items.
-- [ ] Checks CI/deploy status and failed workflow logs.
-- [ ] Scans for obvious leaked secret files or token patterns.
-- [ ] Produces a concise fleet report.
-- [ ] Can be scheduled later without becoming noisy.
+- [ ] Defines read-only reviewer roles for code, docs, security, validation, and reasoning.
+- [ ] Provides checklists that prioritize findings over summaries.
+- [ ] Requires file/line evidence or reproducible commands for claims.
+- [ ] Separates blockers, high-confidence findings, questions, and low-confidence risks.
+- [ ] Detects missing validation and overclaimed completion.
+- [ ] Includes privacy and secret-handling rules.
+- [ ] Produces concise review reports that the hub can act on.
+- [ ] Fits builder-reviewer and release-gate workflows.
 
 ## Operating Principles
 

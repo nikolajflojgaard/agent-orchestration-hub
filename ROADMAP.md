@@ -49,15 +49,36 @@ This is the working tasklist for building a stronger personal agent operating sy
   - Repo shipped: https://github.com/nikolajflojgaard/personal-ops-dashboard
   - Local refresh LaunchAgent installed: `ai.openclaw.personal-ops-dashboard`
 
-- [ ] **Skill Publisher Pipeline**
+- [x] **Skill Publisher Pipeline**
   - Turn a Skill Workshop proposal into repo, docs, release artifact, and OpenClaw community publishing flow.
   - Handle ClawHub auth/publish once credentials are available.
+  - Repo shipped: https://github.com/nikolajflojgaard/skill-publisher-pipeline
 
 ## Current Build Target
 
-**Skill Publisher Pipeline** is the next build.
+**Roadmap core stack is shipped.**
 
-Reason: the core workflow skills, QA, memory, TaskFlow runner, evaluation harness, code-doc CI rollout, startup layer, and local ops visibility are now in place. The remaining roadmap item is turning skills/proposals into reusable publishing packages and a ClawHub/community release path once auth is ready.
+Reason: the core workflow skills, QA, memory, TaskFlow runner, evaluation harness, code-doc CI rollout, startup layer, local ops visibility, and skill packaging path are now in place. The remaining gap is not another local skill; it is authenticated community publishing once ClawHub/community credentials are ready.
+
+## Acceptance Criteria For Skill Publisher Pipeline
+
+- [x] Package a local skill or proposal export into a clean release directory.
+- [x] Validate `SKILL.md` frontmatter and skill naming.
+- [x] Copy only approved support folders into the package.
+- [x] Generate manifest, validation report, release notes, publish checklist, and zip archive.
+- [x] Keep community/ClawHub publishing as an explicit gate instead of an implied success.
+- [x] Generate docs, diagrams, and Code docs CI for the repo.
+- [x] Publish public repo and verify Code docs workflow.
+
+## Skill Publisher Pipeline Summary
+
+Skill Publisher Pipeline turns local skills or proposal exports into release-ready packages while keeping release statuses honest.
+
+Runtime:
+
+- Source repo: https://github.com/nikolajflojgaard/skill-publisher-pipeline
+- Packager: `scripts/skill_publisher_pipeline.py`
+- Current community publishing status: blocked on ClawHub/community auth readiness.
 
 ## Acceptance Criteria For Personal Ops Dashboard
 
